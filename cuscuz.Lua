@@ -1,9 +1,8 @@
-    local Knit = game:GetService("ReplicatedStorage").Knit;
-    local RequestUnlockCharacter = Knit.Services.CharacterService.RE.RequestUnlockCharacter;
-    local RequestTeleportToZone = Knit.Services.ZoneService.RF.RequestTeleportToZone;
-
-    RequestTeleportToZone:InvokeServer("Lost Valley")
-    RequestUnlockCharacter:FireServer("shadow")
+Break = true
+while Break == true do
+    wait(0.1)
+    game:GetService("ReplicatedStorage").Knit.Services.ZoneService.RF.RequestTeleportToZone:InvokeServer("Lost Valley")
+    game:GetService("ReplicatedStorage").Knit.Services.CharacterService.RE.RequestUnlockCharacter:FireServer("shadow")
     wait(0.3)
 end
 end
